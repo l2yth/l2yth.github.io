@@ -1203,149 +1203,137 @@
             100% { transform: skew(0deg); }
         }
 
-        /* ===== RESPONSIVE FIX ONLY - DO NOT TOUCH DESIGN ===== */
+        /* ===== FINAL MOBILE CENTER FIX ===== */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+nav {
+    width: 100%;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+}
+
+.hero {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
 .hero-content {
     width: 100%;
-    max-width: 1000px;
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-}
-
-.hero-profile {
-    width: clamp(150px, 22vw, 180px);
-    height: clamp(150px, 22vw, 180px);
-    margin: 1.8rem auto 2rem;
-}
-
-.hero .name-ar {
-    margin-top: 0;
-}
-
-.hero .name-en {
-    word-break: keep-all;
-}
-
-@media (max-width: 1024px) {
-    .hero {
-        padding: 7rem 1.5rem 3rem;
-        min-height: auto;
-    }
-
-    .hero-content {
-        padding-top: 2rem;
-    }
-
-    .hero-stats {
-        gap: 1rem;
-    }
-
-    .stat-item {
-        min-width: 130px;
-        padding: 1.2rem 1.5rem;
-    }
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
     nav {
-        padding: 0.9rem 1.2rem;
+        padding: 0.9rem 1rem !important;
+        justify-content: space-between;
     }
 
-    .logo-3d,
-    .logo-3d::before {
-        font-size: 1.4rem;
+    .mobile-toggle {
+        display: flex !important;
+        position: relative;
+        left: auto;
+        right: auto;
+        flex-shrink: 0;
+        z-index: 2000;
+    }
+
+    .mobile-toggle span {
+        display: block;
+        width: 26px;
+        height: 2px;
+        background: var(--text);
+    }
+
+    .logo-3d {
+        flex-shrink: 0;
     }
 
     .hero {
-        padding: 6rem 1rem 2.5rem;
-        align-items: flex-start;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10rem 1rem 2.5rem !important;
+    min-height: auto;
+
     }
 
-    .hero-profile {
-        width: 145px;
-        height: 145px;
-        margin: 1.4rem auto 1.8rem;
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    .hero-profile::before {
-        top: -8px;
-        left: -8px;
-        right: -8px;
-        bottom: -8px;
-    }
-
-    .hero-profile::after {
-        top: -15px;
-        left: -15px;
-        right: -15px;
-        bottom: -15px;
-    }
-
-    .hero .name-ar {
-        font-size: 2rem;
-    }
-
-    .hero .name-en {
-        font-size: 0.78rem;
-        letter-spacing: 3px;
+    .hero h1 {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        font-size: clamp(2rem, 9vw, 2.8rem);
+        line-height: 1.25;
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: break-word;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
-        line-height: 1.7;
+        width: 100%;
+        max-width: 340px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-stats {
-        display: grid;
-        grid-template-columns: 1fr;
         width: 100%;
         max-width: 320px;
-        margin: 0 auto 2rem;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .stat-item {
         width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-btns {
         width: 100%;
-    }
-
-    .hero-btns .btn {
-        width: 100%;
-        justify-content: center;
         max-width: 320px;
-    }
-
-    section {
-        padding: 4rem 1rem;
-    }
-
-    .about-details {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form {
-        padding: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
+@media (max-width: 768px) {
+    .hero-content {
+        padding-top: 1.5rem !important;
+    }
+}
+/* ===== FINAL HERO DOWN FIX - ALL DEVICES ===== */
+.hero {
+    padding-top: 8.5rem !important;
+}
 
-@media (max-width: 420px) {
-    .hero-profile {
-        width: 130px;
-        height: 130px;
+.hero-content {
+    padding-top: 2.5rem !important;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 9.5rem !important;
     }
 
-    .hero .name-ar {
-        font-size: 1.8rem;
-    }
-
-    .hero .name-en {
-        font-size: 0.68rem;
-        letter-spacing: 2px;
-    }
-
-    .btn {
-        padding: 0.9rem 1.5rem;
+    .hero-content {
+        padding-top: 2rem !important;
     }
 }
     </style>
@@ -1382,7 +1370,7 @@
     </ul>
 </nav>
 
-<!-- Hero Section -->
+
 <!-- Hero Section -->
 <section class="hero" id="home">
     <div class="hero-content">
